@@ -1,0 +1,16 @@
+import random
+
+print('Угадайте число от 0 до 10 за 3 попытки\n')
+
+number = random.randint(0, 11)
+for i in range(3):
+    string = int(input('Введите число: '))
+    if number < string:
+        print('Загаданное число меньше')
+    elif number > string:
+        print('Загаданное число больше')
+    elif number == string:
+        print('Вы выиграли!')
+        break
+else:
+    print('Вы проиграли, загаданное число было равно ' + str(number))
